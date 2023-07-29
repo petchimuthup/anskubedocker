@@ -1,6 +1,6 @@
 play1.yml
 ---
-- hosts: all
+- hosts: kubernetes.core.k8s
   name: "Test Play 1"
   tasks:
     - name: "Install tree"
