@@ -5,7 +5,7 @@ metadata:
 spec:
    containers:
    - name: newcon
-     image: westuser/myimg:latest
+     image: westuser/myansimg:latest
      ports:
      - containerPort: 80
 
