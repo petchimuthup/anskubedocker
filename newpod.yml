@@ -1,12 +1,12 @@
 apiVersion: v1
 kind: Pod
 metadata:
-   namespace: dev
+   namespace: test
    name: mypod
 spec:
    containers:
    - name: newcon
-     image: westuser/newkubeimg:latest
+     image: 826316/ansnginx
      ports:
      - containerPort: 80
 
