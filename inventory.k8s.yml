@@ -1,4 +1,4 @@
 plugin: k8s
 connections:
 - namespaces:
-    - dev
+    - test
