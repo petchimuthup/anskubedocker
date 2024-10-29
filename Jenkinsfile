@@ -1,5 +1,9 @@
 pipeline {
   agent none
+  environment {
+        ANSIBLE_HOST_KEY_CHECKING = 'False'
+        ANSIBLE_INVENTORY = '/home/jenkins/workspace/anskubedocker/inventory.k8s.yml'
+      }
   
   stages {
     stage('connect git repo') {
@@ -41,10 +45,7 @@ pipeline {
       agent {
         label 'dockans'
         }
-      environment {
-        ANSIBLE_HOST_KEY_CHECKING = 'False'
-        ANSIBLE_INVENTORY = '/home/jenkins/workspace/anskubedocker/inventory.k8s.yml'
-      }
+      
       steps {
         script {
           sh '''
