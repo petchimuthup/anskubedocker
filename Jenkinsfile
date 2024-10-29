@@ -38,17 +38,16 @@ pipeline {
       agent {
         label 'dockans'
         }
-      environment {
-        ANSIBLE_HOST_KEY_CHECKING = 'False'
-        ANSIBLE_INVENTORY = '/home/jenkins/workspace/anskubedocker/inventory.k8s.yml'
+        steps {
+        environment {
+          ANSIBLE_HOST_KEY_CHECKING = 'False'
+          ANSIBLE_INVENTORY = '/home/jenkins/workspace/anskubedocker/inventory.k8s.yml'
       }
-      
-      steps {
-        script {
-          sh '''
-            ansible-playbook -i $(ANSIBLE_INVENTORY) newpod.yml \
-            --extra-vars "kubeconfig_path=$(WORKSPACE)/kubeconfig"
-          '''
+          script {
+            sh '''
+              ansible-playbook -i $(ANSIBLE_INVENTORY) newpod.yml \
+              --extra-vars "kubeconfig_path=$(WORKSPACE)/kubeconfig"
+            '''
             }
       }
     }
