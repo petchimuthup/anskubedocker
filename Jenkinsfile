@@ -37,12 +37,13 @@ pipeline {
         
  } 
     stage('package install to pods') {
+      
+      agent {
+        label 'dockans'
+        }
       environment {
         ANSIBLE_HOST_KEY_CHECKING = 'False'
         ANSIBLE_INVENTORY = '/home/jenkins/workspace/anskubedocker/inventory.k8s.yml'
-      }
-      agent {
-        label 'dockans'
       }
       steps {
         script {
