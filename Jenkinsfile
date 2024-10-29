@@ -29,9 +29,7 @@ pipeline {
       }
     }
     stage('deploy image in kubernetes') {
-      environment {
-        KUBE_CONFIG = credentials('kubeconfig')
-      }
+      
       agent {
         label 'kube'
       }
