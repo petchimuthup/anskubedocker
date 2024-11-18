@@ -1,4 +1,5 @@
-plugin: k8s
+plugin: community.kubernetes.k8s
+kubeconfig: /home/jenkins/.kube
 connections:
 - namespaces:
     - test
