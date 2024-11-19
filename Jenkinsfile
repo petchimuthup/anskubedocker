@@ -36,7 +36,7 @@ pipeline {
     stage('package install to pods') {
       
       agent {
-        label 'dockans'
+        label 'kube'
         }
       environment {
         ANSIBLE_HOST_KEY_CHECKING = 'False'
