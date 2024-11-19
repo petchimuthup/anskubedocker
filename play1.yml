@@ -1,4 +1,3 @@
-play1.yml
 ---
 - hosts: k8s
   name: "Test Play 1"
