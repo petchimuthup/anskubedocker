@@ -17,8 +17,8 @@ pipeline {
       steps {
         script {
           withDockerRegistry(credentialsId: 'dockerhublogin', toolName: 'docker') {
-            sh 'docker build -t 826316/ansnginx .'
-            sh 'docker push 826316/ansnginx'
+            sh 'docker build -t 826316/ubutst .'
+            sh 'docker push 826316/ubutst'
       }
     }
       }
