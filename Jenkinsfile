@@ -9,20 +9,7 @@ pipeline {
         git([url: 'https://github.com/petchimuthup/anskubedocker.git', branch: 'master'])
              }
     }
-    
-    stage('build docker image and push') {
-      agent {
-        label 'dockans'
-          }
-      steps {
-        script {
-          withDockerRegistry(credentialsId: 'dockerhublogin', toolName: 'docker') {
-            sh 'docker build -t 826316/ubutst .'
-            sh 'docker push 826316/ubutst'
-      }
-    }
-      }
-    }
+          
     stage('deploy image in kubernetes') {
       
       agent {
