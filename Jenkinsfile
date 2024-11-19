@@ -46,7 +46,7 @@ pipeline {
       steps {
           script {
             sh '''
-              sudo ansible-playbook -i ${ANSIBLE_INVENTORY} newpod.yml \
+              ansible-playbook -i ${ANSIBLE_INVENTORY} newpod.yml \
               --extra-vars "kubeconfig_path=${WORKSPACE}/kubeconfig"
             '''
             }
