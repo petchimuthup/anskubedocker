@@ -6,7 +6,7 @@ metadata:
 spec:
    containers:
    - name: newcon
-     image: 826316/ansnginx
+     image: 826316/ansubuntu
      ports:
      - containerPort: 80
 
