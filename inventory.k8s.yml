@@ -1,4 +1,10 @@
-plugin: k8s
+plugin: community.kubernetes.k8s
+kubeconfig: /home/jenkins/.kube/config
 connections:
 - namespaces:
-    - test
+  - test
+hostnames:
+  - "{{ item.metadata.name }}"
+keyed_groups:
+  - prefix: kube
+    key: metadata.labels.app
