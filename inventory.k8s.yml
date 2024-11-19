@@ -1,5 +1,4 @@
 plugin: k8s
-kubeconfig: /home/jenkins/.kube
 connections:
 - namespaces:
     - test
