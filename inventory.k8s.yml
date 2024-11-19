@@ -1,4 +1,4 @@
-plugin: community.kubernetes.k8s
+plugin: kubernetes.core.k8s
 kubeconfig: /home/jenkins/.kube
 connections:
 - namespaces:
