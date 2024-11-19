@@ -17,6 +17,7 @@ pipeline {
       }
       steps {
         sh 'kubectl create -f newpod.yml'
+        sh 'sleep 1m'
       }
         
  } 
